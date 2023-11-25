@@ -1,60 +1,49 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 #include <string.h>
-#include <ctype.h>
-#include <time.h>
+#include <locale.h>
 
-int main()
-{
+int main() {
     setlocale(LC_ALL, "portuguese");
-
-    char nomes[250];
-    int numeros;
-    char  escolha;
-  
-   
-   
-
-    do
-    {
-    
-    	 system ("cls  ||clear");  
-       
-	  	printf("digite o nome : \n");
-    	scanf("%s",&nomes);
-    	 
-    	
-    	printf("digite o numero : \n");
-    	scanf("%d",&numeros);
-    	
-      system ("cls  ||clear");    
-    	
-    	
-        printf("-----DESEJA CALCULAR ADCIONAR MAIS ALGUEM ?-----\n");
-        printf(" 1 || SIM\n");
-        printf(" 2 || NÃO\n");
-        printf("Digite sua escolha :\n");
-        scanf("%s", &escolha);
-
-     
-     
-    } while (escolha == '2');
-    
+    char nome[10][100];
+    char numero[10][100];
+    int escolha;
+    int i;
+    int contador=0;
 	
-	 printf("~~~~~~~~Contatos~~~~~~~~\n\n");
-            printf("nomes : %s \n", nomes);
-            printf("numeros: %d \n", numeros);		
-	return 0;
+	do{
+			
+	printf("|-----------Menu------------|\n");
+    printf("|codigo | alternatinas      |\n");
+    printf("|1      | Novo contatos     |\n");
+    printf("|2      | exibir contatos   |\n");
+    printf("|---------------------------|\n");
+    
+		printf("escolha: ");
+		scanf("%i", &escolha);
+		if(escolha ==1)
+		{	
+			system("cls || clear");
+			printf("nome: ");
+			fflush(stdin);
+			scanf("%s",&nome[contador]);
+			
+			printf("numero: ");
+			fflush(stdin);
+			scanf("%s",&numero[contador]);
+			system("cls || clear");
+			contador++;
+			
+		}else break;			
+					
+		
+	}while(escolha=1);
+	
+	for(i=0; i<contador; i++)
+{
+                printf("exibindo contatos : \n");
+		printf("\n\n\n");
+		printf("nome: %s\n", nome[i]);
+		printf("numero: %s\n", numero[i]);
+	}
+    return 0;
 }
-			 	  
-	 
-
-   
-       
-
-  
-   
-   
-
-       
