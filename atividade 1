@@ -3,6 +3,7 @@
 
 int main()
 {
+setlocale(LC_ALL, "portuguese");
   char nome[5][200];
   int idade[5];
   int maisvelho = 0;
