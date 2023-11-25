@@ -3,6 +3,7 @@
 
 int main()
 {
+setlocale(LC_ALL, "portuguese");
    float notas [5][3];
    char nomes [5][200];
    int idade [5]; 
