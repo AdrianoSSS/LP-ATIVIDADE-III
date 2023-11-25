@@ -33,7 +33,7 @@ int main()
     	
         printf("-----DESEJA CALCULAR ADCIONAR MAIS ALGUEM ?-----\n");
         printf(" 1 || SIM\n");
-        printf(" 2 || N√O\n");
+        printf(" 2 || N√ÉO\n");
         printf("Digite sua escolha :\n");
         scanf("%s", &escolha);
 
