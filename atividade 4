@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    
+    int i;
+    int numero[5];
+    int somageral= 0; 
+    int par = 0;
+    int impares = 0;
+    int maiornumero = 0;
+    int menornumero = 99999999;
+    int negativo = 0;
+    float mediapar = 0;
+    float mediageral = 0;
+
+
+
+    for (i = 0; i < 5; i++) {
+        printf("Digite o %d número: ", i +1);
+        scanf("%d", &numero[i]);
+
+        somageral += numero[i];
+
+        maiornumero = maiornumero > numero[i] ? maiornumero : numero[i];
+        menornumero = menornumero < numero[i] ? menornumero : numero[i];
+
+        if (numero[i] % 2 == 0) {
+            par++;
+            mediapar = somageral / par;
+        } else {
+            impares++;
+        }
+
+        if (numero[i] < 0) 
+        {
+            negativo++;
+        } 
+    }
+    mediageral = somageral/5;
+    
+    printf("exibindo resultados : \n");
+
+    printf("números ímpares: %d \n", impares);
+    printf("números negativos: %d \n", negativo);
+    printf("maior número: %d \n", maiornumero);
+    printf("menor número: %d \n", menornumero);
+    printf("média par: %.1f \n", mediapar);
+    printf("média geral: %.1f \n", mediageral);
+
+    return 0;
+}
