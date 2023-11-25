@@ -30,7 +30,7 @@ int main()
     system ("cls  ||clear");    
    }
 
-   printf("\nExibindo as informações dos alunos...\n");
+   printf("\nExibindo as informaÃ§Ãµes dos alunos...\n");
    for(i=0;i<5;i++){
        printf("\nnome : %s \n",nomes[i]);
        printf("idade : %d \n",idade[i]);
@@ -45,7 +45,7 @@ int main()
    	printf("Aprovado!!");
    }else if (media[i] >= 5)
    {
-   	printf("Recuperação!!");
+   	printf("RecuperaÃ§Ã£o!!");
    }
    else
    {
