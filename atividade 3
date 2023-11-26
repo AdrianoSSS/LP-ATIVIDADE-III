@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <locale.h>
 
@@ -12,30 +13,24 @@ int main() {
 	
 	do{
 			
-	printf("|-----------Menu------------|\n");
-    printf("|codigo | alternatinas      |\n");
+    printf("|-----------Menu------------|\n");
     printf("|1      | Novo contatos     |\n");
     printf("|2      | exibir contatos   |\n");
     printf("|---------------------------|\n");
-    
-		printf("escolha: ");
-		scanf("%i", &escolha);
-		if(escolha ==1)
-		{	
-			system("cls || clear");
-			printf("nome: ");
-			fflush(stdin);
-			scanf("%s",&nome[contador]);
-			
-			printf("numero: ");
-			fflush(stdin);
-			scanf("%s",&numero[contador]);
-			system("cls || clear");
-			contador++;
-			
-		}else break;			
-					
-		
+	printf("escolha: ");
+	scanf("%i", &escolha);
+	if(escolha ==1)
+	{	
+	 system("cls || clear");
+	 printf("nome: ");
+	 fflush(stdin);
+	 scanf("%s",&nome[contador]);			
+	 printf("numero: ");
+	 fflush(stdin);
+	 scanf("%s",&numero[contador]);
+	 system("cls || clear");
+	 contador++;		
+	 }else break;					
 	}while(escolha=1);
 	
 	for(i=0; i<contador; i++)
